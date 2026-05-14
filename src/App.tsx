@@ -1,12 +1,13 @@
-function App() {
+import { Routes, Route } from "react-router-dom";
+import MainLayout from "./layouts/MainLayout";
+import Home from "./pages/Home";
+
+export default function App() {
   return (
-    <div>
-      <div className="text-red-500 text-4xl">
-        Test Tailwind
-      </div>
-      <h1>Eurostok</h1>
-    </div>
+    <Routes>
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<Home />} />
+      </Route>
+    </Routes>
   );
 }
-
-export default App;
